@@ -2,7 +2,7 @@
 
 import os
 
-filepath = r'C:\Users\learning\Downloads\Complete Vue Developer in 2021 (w Vuex, Composition API, Router)\[TutsNode.com] - Complete Vue Developer in 2021 (w Vuex, Composition API, Router)'
+filepath = r'C:\Users\learning\Downloads\Complete Vue Developer in 2021 (w Vuex, Composition API, Router)\Complete Vue Developer in 2021 (w Vuex, Composition API, Router)'
 filename = os.path.join(filepath,'Complete Vue Developer in 2021 (w Vuex, Composition API, Router).txt') 
 
 #get the names of the files in the folder
@@ -43,8 +43,8 @@ def change_filename(filename, filepath):
     for file in old_filenames:
         #get the index
         index = int(file.split('lesson')[1].split('.')[0])     
-        new_filename = filepath +r'\{}. '.format(index)+ r'{}.mp4'.format(new_filenames[index-1])
+        new_filepath = filepath +r'\{}. '.format(index)+ r'{}.mp4'.format(new_filenames[index-1])
         # rename the file
-        os.rename(filepath + r'\{}'.format(file), new_filename)
+        os.rename(filepath + r'\{}'.format(file), new_filepath)
 
 change_filename(filename, filepath)
